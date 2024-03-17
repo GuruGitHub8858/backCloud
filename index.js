@@ -4,7 +4,7 @@ const cors = require('cors');//connecting crosss origin
 const app = express();
 const port = process.env.PORT || 5000;
 //connecting with  mongodb compass 
-mongoose.connect('mongodb://127.0.0.1:27017/MernStack')
+mongoose.connect('mongodb+srv://drguru750:mern@cluster0.6tdofpr.mongodb.net/?retryWrites=true&w=majority&appName=Cluster0')
     //connectivity string =adress+data
     .then(() => {
         console.log('Connected to vcet database');
@@ -18,7 +18,7 @@ const UserSchema = new mongoose.Schema({
     name: { type: String, require: true },
 });
 
-const Collections = mongoose.model('live', UserSchema);
+const Collections = mongoose.model('happy', UserSchema);
 
 app.use(express.json());
 app.use(cors());
